@@ -123,6 +123,7 @@
     <TypeScriptCompile Include="Controllers\UserController.ts" />
     <TypeScriptCompile Include="Models\Db.ts" />
     <TypeScriptCompile Include="Models\Schema.ts" />
+    <TypeScriptCompile Include="Public\Scripts\Controllers\CrudCtrl.ts" />
     <TypeScriptCompile Include="Public\Scripts\TravelMonitoring.ts" />
     <TypeScriptCompile Include="Services\ClientServices.ts" />
     <TypeScriptCompile Include="Services\UserServices.ts" />
@@ -149,6 +150,7 @@
     <Folder Include="Public\Css\img\favicon\" />
     <Folder Include="Public\Css\img\jqueryui\" />
     <Folder Include="Public\Css\smartadmin\" />
+    <Folder Include="Public\Scripts\Controllers\" />
     <Folder Include="Public\Views\" />
     <Folder Include="Public\Scripts\" />
     <Folder Include="Public\Scripts\Smartadmin\" />
