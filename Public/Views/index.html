@@ -1,11 +1,50 @@
 ﻿<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en" ng-app="travelTracking">
 <head>
-    <meta charset="utf-8" />
-    <title></title>
-</head>
-<body>
+    <base href="/travel-monitoring">
+    <meta charset="utf-8">
+    <title>Travel Monitoring</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
+    <link rel="stylesheet" type="text/css" media="screen" href="/travel-monitoring/modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="/travel-monitoring/modules/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="/travel-monitoring/modules/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="/travel-monitoring/modules/angular-ui-notification/dist/angular-ui-notification.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="/travel-monitoring/modules/angular-loading-bar/src/loading-bar.css" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/travel-monitoring/local/css/smartadmin/smartadmin-production-plugins.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="/travel-monitoring/local/css/smartadmin/smartadmin-production.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="/travel-monitoring/local/css/smartadmin/smartadmin-rtl.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="/travel-monitoring/local/css/smartadmin/smartadmin-skins.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="/travel-monitoring/local/css/app.css">
+</head>
+<body class="desktop-detected pace-done smart-style-1 fixed-header menu-on-top">
+    <ui-view></ui-view>
+    <script type="text/javascript" src="/travel-monitoring/modules/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="/travel-monitoring/modules/angular/angular.min.js"></script>
+    <script type="text/javascript" src="/travel-monitoring/modules/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script type="text/javascript" src="/travel-monitoring/modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/travel-monitoring/modules/bootstrap-ui-datetime-picker/dist/datetime-picker.min.js"></script>
+    <script type="text/javascript" src="/travel-monitoring/modules/leaflet/dist/leaflet-src.js"></script>
+    <script type="text/javascript" src="/travel-monitoring/modules/leaflet-realtime/dist/leaflet-realtime.js"></script>
+    <script type="text/javascript" src="/travel-monitoring/modules/angular-paging/dist/paging.min.js"></script>
+    <script type="text/javascript" src="/travel-monitoring/modules/angular-loading-bar/src/loading-bar.js"></script>
+    <script type="text/javascript" src="/travel-monitoring/modules/angular-bootstrap-npm/dist/angular-bootstrap-tpls.min.js"></script>
+    <script type="text/javascript" src="/travel-monitoring/modules/bootstrap-ui-datetime-picker/dist/datetime-picker.min.js"></script>
+    <script type="text/javascript" src="/travel-monitoring/modules/angular-ui-notification/dist/angular-ui-notification.min.js"></script>
+
+    <script type="text/javascript" src="/travel-monitoring/local/js/Smartadmin/app.config.js"></script>
+    <script type="text/javascript" src="/travel-monitoring/local/js/Smartadmin/app.min.js"></script>
+    <script type="text/javascript" src="/travel-monitoring/local/js/Smartadmin/jarvis.widget.min.js"></script>
+    <script type="text/javascript" src="/travel-monitoring/local/js/TravelTracking.js"></script>
+    <script type="text/javascript" src="/travel-monitoring/local/js/Services.js"></script>
+    <script type="text/javascript" src="/travel-monitoring/local/js/Controllers/CrudCtrl.js"></script>
+    <script type="text/javascript" src="/travel-monitoring/local/js/Controllers/IndexCtrl.js"></script>
+    <script type="text/javascript" src="/travel-monitoring/local/js/Controllers/LoginCtrl.js"></script>
+    <script type="text/javascript" src="/travel-monitoring/local/js/Controllers/ClientCtrl.js"></script>
+    <script type="text/javascript" src="/travel-monitoring/local/js/Controllers/MonitoringCtrl.js"></script>
+    <script type="text/javascript" src="/travel-monitoring/local/js/Controllers/HistoryCtrl.js"></script>
 </body>
 </html>
