@@ -62,23 +62,23 @@ var TravelMonitoring;
                 }
             }).state('site.login', {
                 url: TravelMonitoring.root + '/login',
-                templateUrl: TravelMonitoring.root + '/views/login.html',
+                templateUrl: TravelMonitoring.root + '/Views/login.html',
                 controller: 'LoginCtrl as ctrl'
             }).state('site.main', {
                 url: TravelMonitoring.root,
-                templateUrl: TravelMonitoring.root + '/views/main.html',
+                templateUrl: TravelMonitoring.root + '/Views/main.html',
                 controller: 'IndexCtrl as ctrl'
             }).state('site.main.client', {
                 url: '/client',
-                templateUrl: TravelMonitoring.root + '/views/client.html',
+                templateUrl: TravelMonitoring.root + '/Views/client.html',
                 controller: 'ClientCtrl as ctrl'
             }).state('site.main.monitoring', {
                 url: '/monitoring',
-                templateUrl: TravelMonitoring.root + '/views/monitoring.html',
+                templateUrl: TravelMonitoring.root + '/Views/monitoring.html',
                 controller: 'MonitoringCtrl as ctrl'
             }).state('site.main.history', {
                 url: '/history?client&device',
-                templateUrl: TravelMonitoring.root + '/views/history.html',
+                templateUrl: TravelMonitoring.root + '/Views/history.html',
                 controller: 'HistoryCtrl as ctrl'
             });
         }]);
