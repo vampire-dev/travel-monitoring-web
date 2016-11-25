@@ -1,0 +1,10 @@
+.vs
+obj
+*.user
+*.js.map
+Models/*.js.map
+Controllers/*.js.map
+Public/Scripts/*.js.map
+Public/Scripts/Controllers/*.js.map
+node_modules
+env.json

@@ -1,0 +1,108 @@
+{
+  "version": "v4",
+  "repo": "borisyankov/DefinitelyTyped",
+  "ref": "master",
+  "path": "typings",
+  "bundle": "typings/tsd.d.ts",
+  "installed": {
+    "serve-static/serve-static.d.ts": {
+      "commit": "40369139ce3199a94fb7a89233ed31c5fe07c567"
+    },
+    "mime/mime.d.ts": {
+      "commit": "40369139ce3199a94fb7a89233ed31c5fe07c567"
+    },
+    "express/express.d.ts": {
+      "commit": "40369139ce3199a94fb7a89233ed31c5fe07c567"
+    },
+    "express-serve-static-core/express-serve-static-core.d.ts": {
+      "commit": "40369139ce3199a94fb7a89233ed31c5fe07c567"
+    },
+    "node/node.d.ts": {
+      "commit": "40369139ce3199a94fb7a89233ed31c5fe07c567"
+    },
+    "mongodb/mongodb.d.ts": {
+      "commit": "40369139ce3199a94fb7a89233ed31c5fe07c567"
+    },
+    "mongoose/mongoose.d.ts": {
+      "commit": "40369139ce3199a94fb7a89233ed31c5fe07c567"
+    },
+    "body-parser/body-parser.d.ts": {
+      "commit": "40369139ce3199a94fb7a89233ed31c5fe07c567"
+    },
+    "express-session/express-session.d.ts": {
+      "commit": "40369139ce3199a94fb7a89233ed31c5fe07c567"
+    },
+    "angularjs/angular.d.ts": {
+      "commit": "40369139ce3199a94fb7a89233ed31c5fe07c567"
+    },
+    "jquery/jquery.d.ts": {
+      "commit": "40369139ce3199a94fb7a89233ed31c5fe07c567"
+    },
+    "geojson/geojson.d.ts": {
+      "commit": "40369139ce3199a94fb7a89233ed31c5fe07c567"
+    },
+    "ng-cordova/tsd.d.ts": {
+      "commit": "40369139ce3199a94fb7a89233ed31c5fe07c567"
+    },
+    "ng-cordova/device.d.ts": {
+      "commit": "40369139ce3199a94fb7a89233ed31c5fe07c567"
+    },
+    "ng-cordova/toast.d.ts": {
+      "commit": "40369139ce3199a94fb7a89233ed31c5fe07c567"
+    },
+    "ng-cordova/emailComposer.d.ts": {
+      "commit": "40369139ce3199a94fb7a89233ed31c5fe07c567"
+    },
+    "ng-cordova/dialogs.d.ts": {
+      "commit": "40369139ce3199a94fb7a89233ed31c5fe07c567"
+    },
+    "ng-cordova/network.d.ts": {
+      "commit": "40369139ce3199a94fb7a89233ed31c5fe07c567"
+    },
+    "ng-cordova/deviceMotion.d.ts": {
+      "commit": "40369139ce3199a94fb7a89233ed31c5fe07c567"
+    },
+    "ng-cordova/geolocation.d.ts": {
+      "commit": "40369139ce3199a94fb7a89233ed31c5fe07c567"
+    },
+    "ng-cordova/appAvailability.d.ts": {
+      "commit": "40369139ce3199a94fb7a89233ed31c5fe07c567"
+    },
+    "ng-cordova/deviceOrientation.d.ts": {
+      "commit": "40369139ce3199a94fb7a89233ed31c5fe07c567"
+    },
+    "ng-cordova/app-version.d.ts": {
+      "commit": "40369139ce3199a94fb7a89233ed31c5fe07c567"
+    },
+    "ng-cordova/datepicker.d.ts": {
+      "commit": "40369139ce3199a94fb7a89233ed31c5fe07c567"
+    },
+    "ng-cordova/badge.d.ts": {
+      "commit": "40369139ce3199a94fb7a89233ed31c5fe07c567"
+    },
+    "ng-cordova/actionSheet.d.ts": {
+      "commit": "40369139ce3199a94fb7a89233ed31c5fe07c567"
+    },
+    "ng-cordova/camera.d.ts": {
+      "commit": "40369139ce3199a94fb7a89233ed31c5fe07c567"
+    },
+    "ng-cordova/fileTransfer.d.ts": {
+      "commit": "40369139ce3199a94fb7a89233ed31c5fe07c567"
+    },
+    "leaflet/leaflet.d.ts": {
+      "commit": "40369139ce3199a94fb7a89233ed31c5fe07c567"
+    },
+    "cordova/plugins/Camera.d.ts": {
+      "commit": "40369139ce3199a94fb7a89233ed31c5fe07c567"
+    },
+    "cordova/plugins/FileSystem.d.ts": {
+      "commit": "40369139ce3199a94fb7a89233ed31c5fe07c567"
+    },
+    "ng-cordova/file.d.ts": {
+      "commit": "40369139ce3199a94fb7a89233ed31c5fe07c567"
+    },
+    "cordova/plugins/FileTransfer.d.ts": {
+      "commit": "40369139ce3199a94fb7a89233ed31c5fe07c567"
+    }
+  }
+}
