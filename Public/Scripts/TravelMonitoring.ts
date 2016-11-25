@@ -76,23 +76,23 @@ module TravelMonitoring {
                 }
             }).state('site.login', {
                 url: root + '/login',
-                templateUrl: root + '/views/login.html',
+                templateUrl: root + '/Views/login.html',
                 controller: 'LoginCtrl as ctrl'
             }).state('site.main', {
                 url: root,
-                templateUrl: root + '/views/main.html',
+                templateUrl: root + '/Views/main.html',
                 controller: 'IndexCtrl as ctrl'
             }).state('site.main.client', {
                 url: '/client',
-                templateUrl: root + '/views/client.html',
+                templateUrl: root + '/Views/client.html',
                 controller: 'ClientCtrl as ctrl'
             }).state('site.main.monitoring', {
                 url: '/monitoring',
-                templateUrl: root + '/views/monitoring.html',
+                templateUrl: root + '/Views/monitoring.html',
                 controller: 'MonitoringCtrl as ctrl'
             }).state('site.main.history', {
                 url: '/history?client&device',
-                templateUrl: root + '/views/history.html',
+                templateUrl: root + '/Views/history.html',
                 controller: 'HistoryCtrl as ctrl'
             });
         }]);
