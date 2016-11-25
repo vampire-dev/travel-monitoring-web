@@ -86,6 +86,10 @@
             var center = this.map.project(entity.marker._latlng, 16);
             this.map.setView(this.map.unproject(center, 16), 16, { animate: true });
         }
+
+        redirectHistory(entity): void {
+            this.$state.go('site.main.history', { "client": entity._id, "device": entity.feature.device._id });
+        }
     }
 
     travelMonitoring.controller('MonitoringCtrl', MonitoringCtrl);

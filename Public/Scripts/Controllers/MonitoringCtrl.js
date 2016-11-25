@@ -71,6 +71,9 @@ var TravelMonitoring;
                 var center = this.map.project(entity.marker._latlng, 16);
                 this.map.setView(this.map.unproject(center, 16), 16, { animate: true });
             }
+            redirectHistory(entity) {
+                this.$state.go('site.main.history', { "client": entity._id, "device": entity.feature.device._id });
+            }
         }
         MonitoringCtrl.$inject = ['$scope', '$state', 'principal', 'Notification'];
         TravelMonitoring.travelMonitoring.controller('MonitoringCtrl', MonitoringCtrl);

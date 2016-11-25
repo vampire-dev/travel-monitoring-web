@@ -20,7 +20,7 @@
     <OutputPath>.</OutputPath>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
-    <ProjectView>ShowAllFiles</ProjectView>
+    <ProjectView>ProjectFiles</ProjectView>
     <TypeScriptSourceMap>true</TypeScriptSourceMap>
     <TypeScriptModuleKind>CommonJS</TypeScriptModuleKind>
     <EnableTypeScript>true</EnableTypeScript>
@@ -113,6 +113,7 @@
     <Content Include="Public\Css\smartadmin\smartadmin-rtl.min.css" />
     <Content Include="Public\Css\smartadmin\smartadmin-skins.min.css" />
     <Content Include="Public\Views\client.html" />
+    <Content Include="Public\Views\history.html" />
     <Content Include="Public\Views\index.html" />
     <Content Include="Public\Views\login.html" />
     <Content Include="Public\Views\main.html" />

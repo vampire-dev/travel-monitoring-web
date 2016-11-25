@@ -41,6 +41,12 @@ var TravelMonitoring;
             }
         }
         Services.Client = Client;
+        class Collection {
+            static GetAggregates(query) {
+                return TravelMonitoring.http.get(TravelMonitoring.geoService + 'collection/getAggregates?query=' + JSON.stringify(query));
+            }
+        }
+        Services.Collection = Collection;
     })(Services = TravelMonitoring.Services || (TravelMonitoring.Services = {}));
 })(TravelMonitoring || (TravelMonitoring = {}));
 //# sourceMappingURL=Services.js.map

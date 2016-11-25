@@ -1,0 +1,81 @@
+﻿<section id="widget-grid">
+    <div class="row no-space">
+        <article class="col-md-3">
+            <div class="jarviswidget" role="widget">
+                <header role="heading" data-block="header">
+                    <span class="widget-icon">
+                        <i class="fa fa-users"></i>
+                    </span>
+                    <h2>Configuration</h2>
+                </header>
+                <div>
+                    <div class="jarviswidget-editbox"></div>
+                    <div class="widget-body no-padding">
+                        <div class="widget-body-toolbar">
+                            <i class="icon-append fa fa-calendar" ng-click="ctrl.openCalendar($event, 'from')"></i>
+                            <input type="text" class="form-control" datetime-picker ng-model="ctrl.filters.from" is-open="ctrl.from.open" />
+
+                            <i class="icon-append fa fa-calendar" ng-click="ctrl.openCalendar($event, 'to')"></i>
+                            <input type="text" class="form-control" datetime-picker ng-model="ctrl.filters.to" is-open="ctrl.to.open" />
+                            <br />
+
+                            <button class="btn btn-primary" ng-click="ctrl.start()">
+                                <i class="fa" ng-class="{'fa-stop': ctrl.tracking, 'fa-play' : !ctrl.tracking}"></i> {{ctrl.tracking ? 'Stop' : 'Start'}}
+                            </button>
+                        </div>
+                        <div class="table-responsive" style="overflow-y: scroll; max-height:500px;">
+                            <table class="table table-bordered">
+                                <tbody>
+                                    <tr>
+                                        <th>Name</th>
+                                        <td>{{ctrl.client.firstName}} {{ctrl.client.lastName}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Device Model</th>
+                                        <td>{{ctrl.client.device.model}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Device Serial</th>
+                                        <td>{{ctrl.client.device.serial}}</td>
+                                    </tr>
+                                  
+                                    <tr>
+                                        <th>Date</th>
+                                        <td>{{ctrl.marker.date}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Lat</th>
+                                        <td>{{ctrl.marker._latlng.lat}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Lon</th>
+                                        <td>{{ctrl.marker._latlng.lng}}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </article>
+        <article class="col-md-9">
+            <div class="jarviswidget" role="widget">
+                <header role="heading" data-block="header">
+                    <span class="widget-icon">
+                        <i class="fa fa-map-marker"></i>
+                    </span>
+                    <h2>Monitor</h2>
+                </header>
+                <div>
+                    <div class="jarviswidget-editbox"></div>
+                    <div class="widget-body no-padding">
+                        <div class="widget-body-toolbar">
+                            <div class="map" id="map"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </div>
+</section>

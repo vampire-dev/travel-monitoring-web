@@ -46,4 +46,10 @@
             return http.delete(service + 'client/delete?id=' + id);
         }
     }
+
+    export class Collection {
+        static GetAggregates(query: any) {
+            return http.get(geoService + 'collection/getAggregates?query=' + JSON.stringify(query));
+        }
+    }
 }
