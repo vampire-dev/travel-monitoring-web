@@ -45,10 +45,17 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Include=".gitignore" />
+    <Content Include="env.json" />
     <Content Include="tsd.json" />
     <TypeScriptCompile Include="App.ts" />
     <Content Include="package.json" />
     <Content Include="README.md" />
+    <TypeScriptCompile Include="Controllers\BaseController.ts" />
+    <TypeScriptCompile Include="Controllers\ClientController.ts" />
+    <TypeScriptCompile Include="Controllers\UserController.ts" />
+    <TypeScriptCompile Include="Models\Db.ts" />
+    <TypeScriptCompile Include="Models\Schema.ts" />
+    <TypeScriptCompile Include="Setting.ts" />
     <TypeScriptCompile Include="typings\body-parser\body-parser.d.ts" />
     <TypeScriptCompile Include="typings\express-serve-static-core\express-serve-static-core.d.ts" />
     <TypeScriptCompile Include="typings\express\express.d.ts" />
@@ -60,6 +67,8 @@
     <TypeScriptCompile Include="typings\tsd.d.ts" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Models\" />
+    <Folder Include="Controllers\" />
     <Folder Include="typings\" />
     <Folder Include="typings\body-parser\" />
     <Folder Include="typings\express-serve-static-core\" />
