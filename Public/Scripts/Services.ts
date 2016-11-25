@@ -24,4 +24,22 @@
             return http.get(service + 'user/logout');
         }
     }
+
+    export class Client {
+        static Get(id: any) {
+            return http.get(service + 'client/get?id=' + id);
+        }
+
+        static GetAll(query: any) {
+            return http.get(service + 'client/getAll?query=' + JSON.stringify(query));
+        }
+
+        static Save(data: any) {
+            return http.post(service + 'client/save', JSON.stringify(data));
+        }
+
+        static Delete(id: any) {
+            return http.delete(service + 'client/delete?id=' + id);
+        }
+    }
 }

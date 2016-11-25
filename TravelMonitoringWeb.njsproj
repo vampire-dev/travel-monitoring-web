@@ -113,6 +113,8 @@
     <Content Include="Public\Css\smartadmin\smartadmin-rtl.min.css" />
     <Content Include="Public\Css\smartadmin\smartadmin-skins.min.css" />
     <Content Include="Public\Views\index.html" />
+    <Content Include="Public\Views\login.html" />
+    <Content Include="Public\Views\main.html" />
     <Content Include="tsd.json" />
     <TypeScriptCompile Include="App.ts" />
     <Content Include="package.json" />
@@ -123,7 +125,13 @@
     <TypeScriptCompile Include="Controllers\UserController.ts" />
     <TypeScriptCompile Include="Models\Db.ts" />
     <TypeScriptCompile Include="Models\Schema.ts" />
+    <TypeScriptCompile Include="Public\Scripts\Controllers\ClientCtrl.ts" />
     <TypeScriptCompile Include="Public\Scripts\Controllers\CrudCtrl.ts" />
+    <TypeScriptCompile Include="Public\Scripts\Controllers\HistoryCtrl.ts" />
+    <TypeScriptCompile Include="Public\Scripts\Controllers\IndexCtrl.ts" />
+    <TypeScriptCompile Include="Public\Scripts\Controllers\LoginCtrl.ts" />
+    <TypeScriptCompile Include="Public\Scripts\Controllers\MonitoringCtrl.ts" />
+    <TypeScriptCompile Include="Public\Scripts\Services.ts" />
     <TypeScriptCompile Include="Public\Scripts\TravelMonitoring.ts" />
     <TypeScriptCompile Include="Services\ClientServices.ts" />
     <TypeScriptCompile Include="Services\UserServices.ts" />
