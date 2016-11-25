@@ -112,9 +112,11 @@
     <Content Include="Public\Css\smartadmin\smartadmin-production.min.css" />
     <Content Include="Public\Css\smartadmin\smartadmin-rtl.min.css" />
     <Content Include="Public\Css\smartadmin\smartadmin-skins.min.css" />
+    <Content Include="Public\Views\client.html" />
     <Content Include="Public\Views\index.html" />
     <Content Include="Public\Views\login.html" />
     <Content Include="Public\Views\main.html" />
+    <Content Include="Public\Views\monitoring.html" />
     <Content Include="tsd.json" />
     <TypeScriptCompile Include="App.ts" />
     <Content Include="package.json" />

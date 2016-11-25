@@ -30,6 +30,9 @@ var TravelMonitoring;
             static GetAll(query) {
                 return TravelMonitoring.http.get(TravelMonitoring.service + 'client/getAll?query=' + JSON.stringify(query));
             }
+            static GetByDevice(model, serial) {
+                return TravelMonitoring.http.get(TravelMonitoring.service + 'client/getByDevice?model=' + model + '&serial=' + serial);
+            }
             static Save(data) {
                 return TravelMonitoring.http.post(TravelMonitoring.service + 'client/save', JSON.stringify(data));
             }

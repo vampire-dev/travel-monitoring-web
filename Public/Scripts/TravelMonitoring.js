@@ -3,6 +3,7 @@ var TravelMonitoring;
 (function (TravelMonitoring) {
     TravelMonitoring.travelMonitoring = angular.module('travelMonitoring', ['ui.router',
         'ui.bootstrap',
+        'ui.bootstrap.datetimepicker',
         'angular-loading-bar',
         'ui-notification',
         'bw.paging']);

@@ -15,7 +15,6 @@ ClientRouter.get(root + 'client/get', auth, (req: Request, res: Response) => {
 });
 
 ClientRouter.get(root + 'client/getByDevice', auth, (req: Request, res: Response) => {
-    var query = JSON.parse(req.query.query);
     ClientController.getByDevice(req.query.model, req.query.serial).then(result => {
         res.status(200).send(result);
     }).catch(exception => {

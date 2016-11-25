@@ -13,7 +13,6 @@ ClientRouter.get(root + 'client/get', Auth_1.default, (req, res) => {
     });
 });
 ClientRouter.get(root + 'client/getByDevice', Auth_1.default, (req, res) => {
-    var query = JSON.parse(req.query.query);
     ClientController_1.default.getByDevice(req.query.model, req.query.serial).then(result => {
         res.status(200).send(result);
     }).catch(exception => {

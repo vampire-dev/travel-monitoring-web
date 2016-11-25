@@ -1,0 +1,228 @@
+﻿<section id="widget-grid">
+    <div class="row">
+        <article class="col col-sm-12 col-md-12 col-lg-12">
+            <div class="jarviswidget" role="widget" ng-show="ctrl.showForm">
+                <header role="heading" data-block="header">
+                    <span class="widget-icon"> <i class="fa fa-users"></i></span>
+                    <h2>Client Form</h2>
+                </header>
+                <div>
+                    <div class="jarviswidget-editbox"></div>
+                    <div class="widget-body no-padding">
+                        <div class="widget-body-toolbar">
+                            <form class="smart-form">
+                                <fieldset>
+                                    <div class="row">
+                                        <section class="col col-sm-12 col-md-12 col-lg-6">
+                                            <label>First Name</label>
+                                            <label class="input">
+                                                <input type="text" ng-model="ctrl.entity.firstName" />
+                                            </label>
+                                        </section>
+                                        <section class="col col-sm-12 col-md-12 col-lg-6">
+                                            <label>Last Name</label>
+                                            <label class="input">
+                                                <input type="text" ng-model="ctrl.entity.lastName" />
+                                            </label>
+                                        </section>
+                                        <section class="col col-sm-12 col-md-12 col-lg-6">
+                                            <label>Address</label>
+                                            <label class="input">
+                                                <input type="text" ng-model="ctrl.entity.address" />
+                                            </label>
+                                        </section>
+                                        <section class="col col-sm-12 col-md-12 col-lg-6">
+                                            <label>Contact</label>
+                                            <label class="input">
+                                                <input type="text" ng-model="ctrl.entity.contact" />
+                                            </label>
+                                        </section>
+                                        <section class="col col-sm-12 col-md-12 col-lg-6">
+                                            <label>Birth Place</label>
+                                            <label class="input">
+                                                <input type="text" ng-model="ctrl.entity.birthPlace" />
+                                            </label>
+                                        </section>
+                                        <section class="col col-sm-12 col-md-12 col-lg-6">
+                                            <label>Birth Date</label>
+                                            <label class="input">
+                                                <i class="icon-append fa fa-calendar" ng-click="ctrl.openCalendar($event, 'birthDate')"></i>
+                                                <input type="text" class="form-control" datetime-picker ng-model="ctrl.entity.birthDate" is-open="ctrl.birthDate.open" />
+                                            </label>
+                                        </section>
+                                        <section class="col col-sm-12 col-md-12 col-lg-6">
+                                            <label>Passport</label>
+                                            <label class="input">
+                                                <input type="text" ng-model="ctrl.entity.passport" />
+                                            </label>
+                                        </section>
+                                        <section class="col col-sm-12 col-md-12 col-lg-6">
+                                            <label>Registration Date</label>
+                                            <label class="input">
+                                                <i class="icon-append fa fa-calendar" ng-click="ctrl.openCalendar($event, 'registrationDate')"></i>
+                                                <input type="text" class="form-control" datetime-picker ng-model="ctrl.entity.registrationDate" is-open="ctrl.registrationDate.open" />
+                                            </label>
+                                        </section>
+                                        <section class="col col-sm-12 col-md-12 col-lg-6">
+                                            <label>Device Model</label>
+                                            <label class="select">
+                                                <select ng-model="ctrl.entity.device.model">
+                                                    <option value="MT300">MT300</option>
+                                                    <option value="V01">V01</option>
+                                                </select>
+                                                <i></i>
+                                            </label>
+                                        </section>
+                                        <section class="col col-sm-12 col-md-12 col-lg-6">
+                                            <label>Device Serial</label>
+                                            <label class="input">
+                                                <input type="text" ng-model="ctrl.entity.device.serial" />
+                                            </label>
+                                        </section>
+                                    </div>
+                                </fieldset>
+                                <footer>
+                                    <button type="button" class="btn btn-danger" ng-click="ctrl.cancelForm()">
+                                        <i class="fa fa-remove"></i> Cancel
+                                    </button>
+                                    <button type="button" class="btn btn-primary" ng-click="ctrl.save()">
+                                        <i class="fa fa-save"></i> Save
+                                    </button>
+                                </footer>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="jarviswidget" role="widget" ng-show="!ctrl.showForm">
+                <header role="heading" data-block="header">
+                    <span class="widget-icon"> <i class="fa fa-users"></i></span>
+                    <h2>Clients</h2>
+                    <div class="jarviswidget-ctrls" role="menu">
+                        <a href="#" ng-click="ctrl.showFilter = !ctrl.showFilter"
+                           ng-show="ctrl.showFilter" class="button-icon jarviswidget-toggle-btn" rel="tooltip" title="minimize">
+                            <i class="fa fa-minus"></i>
+                        </a>
+                        <a href="#" ng-click="ctrl.showFilter = !ctrl.showFilter"
+                           ng-show="!ctrl.showFilter" class="button-icon jarviswidget-toggle-btn" rel="tooltip" title="maximize">
+                            <i class="fa fa-plus"></i>
+                        </a>
+                    </div>
+                </header>
+                <div>
+                    <div class="jarviswidget-editbox"></div>
+                    <div class="widget-body no-padding">
+                        <div class="widget-body-toolbar" ng-show="ctrl.showFilter">
+                            <form class="smart-form">
+                                <fieldset>
+                                    <div class="row">
+                                        <section class="col col-sm-12 col-md-12 col-lg-3">
+                                            <label class="input">
+                                                <input type="text" placeholder="Name" ng-model="ctrl.filters.name" />
+                                            </label>
+                                        </section>
+                                        <section class="col col-sm-12 col-md-12 col-lg-3">
+                                            <label class="select">
+                                                <select ng-model="ctrl.filters.model">
+                                                    <option value="MT300">MT300</option>
+                                                    <option value="V01">V01</option>
+                                                </select>
+                                                <i></i>
+                                            </label>
+                                        </section>
+                                        <section class="col col-sm-12 col-md-12 col-lg-3">
+                                            <label class="input">
+                                                <input type="text" placeholder="Serial" ng-model="ctrl.filters.serial" />
+                                            </label>
+                                        </section>
+                                        <section class="col col-sm-12 col-md-12 col-lg-3">
+                                            <label class="input">
+                                                <input type="text" placeholder="Passport" ng-model="ctrl.filters.passport" />
+                                            </label>
+                                        </section>
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </div>
+                        <div class="widget-body-toolbar">
+                            <div class="row">
+                                <div class="col-xs-9 col-sm-5 col-md-5 col-lg-6">
+
+                                    <a href="#" class="btn btn-default" style="color: black;" ng-click="ctrl.filter()">
+                                        <i class="fa fa-search"></i> Filter
+                                    </a>
+                                    <a href="#" class="btn btn-default" style="color: black;" ng-click="ctrl.add()">
+                                        <i class="fa fa-plus"></i> Add
+                                    </a>
+                                </div>
+                                <div class="col-xs-9 col-sm-5 col-md-5 col-lg-6">
+                                    <select name="dt_basic_length" aria-controls="dt_basic" class="form-control" ng-model="ctrl.paging.max" ng-change="ctrl.filter()"
+                                            style="float:right; width:15%;" to-number>
+                                        <option value="10">10</option>
+                                        <option value="25">25</option>
+                                        <option value="50">50</option>
+                                        <option value="100">100</option>
+                                        <option value="500">500</option>
+                                        <option value="1000">1000</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-condensed table-striped table-hover">
+                                <thead>
+                                    <tr style="color:black;">
+                                        <th style="text-align: center; width: 7%;">Name</th>
+                                        <th style="text-align: center; width: 8%;">Device Model</th>
+                                        <th style="text-align: center; width: 8%;">Device Serial</th>
+                                        <th style="text-align: center; width: 12%;">Passport</th>
+
+                                        <th style="text-align: center; width: 10%;">Registration</th>
+                                        <th style="text-align: center; width: 5%">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr ng-repeat="entity in ctrl.entities">
+                                        <td>
+                                            {{entity.firstName}} {{entity.lastName}}
+                                        </td>
+                                        <td>
+                                            {{entity.device.model}}
+                                        </td>
+                                        <td>
+                                            {{entity.device.serial}}
+                                        </td>
+                                        <td>
+                                            {{entity.passport}}
+                                        </td>
+                                        <td>
+                                            {{entity.registrationDate | date:'dd-MM-yyyy HH:mm:ss'}}
+                                        </td>
+                                        <td>
+                                            <button type="button" class="btn btn-primary" ng-click="ctrl.edit(entity)">
+                                                <i class="fa fa-edit"></i>
+                                            </button>
+                                            <button type="button" class="btn btn-danger" ng-click="ctrl.delete(entity._id)">
+                                                <i class="fa fa-remove"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="input-group">
+                                <button ng-disabled="(ctrl.paging.page) == 1" href="#" class="btn btn-link" ng-click="ctrl.prev()">
+                                    <i class="fa fa-backward"></i>
+                                </button>
+                                {{ctrl.paging.page}}
+                                <button ng-disabled="ctrl.entities.length == 0" href="#" class="btn btn-link" ng-click="ctrl.next()">
+                                    <i class="fa fa-forward"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </div>
+</section>

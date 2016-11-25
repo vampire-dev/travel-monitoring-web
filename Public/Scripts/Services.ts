@@ -34,6 +34,10 @@
             return http.get(service + 'client/getAll?query=' + JSON.stringify(query));
         }
 
+        static GetByDevice(model: string, serial: string) {
+            return http.get(service + 'client/getByDevice?model=' + model + '&serial=' + serial);
+        }
+
         static Save(data: any) {
             return http.post(service + 'client/save', JSON.stringify(data));
         }

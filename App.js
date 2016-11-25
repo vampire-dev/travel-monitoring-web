@@ -27,4 +27,16 @@ app.listen(Setting_1.default('port'), (error) => {
     console.log('Travel Monitoring DB is running');
     console.log('Travel Monitoring is running on port %s', Setting_1.default('port'));
 });
+app.get('/travel-monitoring', (req, res) => {
+    res.sendFile(path.join(__dirname, 'Public/Views/index.html'));
+});
+app.get('/travel-monitoring/login', (req, res) => {
+    res.sendFile(path.join(__dirname, 'Public/Views/index.html'));
+});
+app.get('/travel-monitoring/client', (req, res) => {
+    res.sendFile(path.join(__dirname, 'Public/Views/index.html'));
+});
+app.get('/travel-monitoring/monitoring', (req, res) => {
+    res.sendFile(path.join(__dirname, 'Public/Views/index.html'));
+});
 //# sourceMappingURL=App.js.map
