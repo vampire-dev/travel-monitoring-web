@@ -19,6 +19,7 @@ var TravelMonitoring;
                 this.to = { "open": false };
                 this.tracking = false;
                 this.counter = 0;
+                this.dataTable = [];
                 $scope.intervalId = -1;
                 this.center = L.latLng(-6.24771, 106.9353617);
                 TravelMonitoring.Services.Client.Get($stateParams.client).then(result => {
@@ -60,6 +61,7 @@ var TravelMonitoring;
                     if (this.counter === 0) {
                         this.marker.setLatLng(this.center);
                         this.polyline.setLatLngs([this.center]);
+                        this.dataTable = [];
                     }
                     if (this.counter > collections.length - 1) {
                         this.$scope.$apply(() => {
@@ -72,11 +74,22 @@ var TravelMonitoring;
                     this.$scope.$apply(() => {
                         var lat = collections[this.counter].features.geometry.coordinates[1];
                         var lng = collections[this.counter].features.geometry.coordinates[0];
+                        var speed = collections[this.counter].features.properties.speed;
+                        var batteryLevel = collections[this.counter].features.properties.batteryLevel;
+                        var signalQuality = collections[this.counter].features.properties.signalQuality;
                         if (lat && lng) {
                             this.polyline.addLatLng([lat, lng]);
                             this.marker.setLatLng(L.latLng(lat, lng));
                             this.marker['date'] = collections[this.counter].features.properties.date;
                         }
+                        this.dataTable.push({
+                            "date": this.marker['date'],
+                            "lat": lat,
+                            "lng": lng,
+                            "speed": speed,
+                            "battery": batteryLevel,
+                            "signal": signalQuality
+                        });
                     });
                     this.counter++;
                 }, 2000);

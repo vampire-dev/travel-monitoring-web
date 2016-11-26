@@ -10,6 +10,7 @@
         polyline: L.Polyline;
         tracking: boolean;
         counter: number;
+        dataTable: any[];
 
         osm = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
             attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
@@ -30,6 +31,7 @@
             this.to = { "open": false };
             this.tracking = false;
             this.counter = 0;
+            this.dataTable = [];
 
             $scope.intervalId = -1;
 
@@ -77,7 +79,7 @@
             if (this.filters.from && this.filters.to) {
                 var from = new Date(this.filters.from);
                 var to = new Date(this.filters.to);
-
+                
                 collections = collections.filter(e => new Date(e.features.properties.date) >= from
                     && new Date(e.features.properties.date) <= to);
             }
@@ -86,6 +88,7 @@
                 if (this.counter === 0) {
                     this.marker.setLatLng(this.center);
                     this.polyline.setLatLngs([this.center]);
+                    this.dataTable = [];
                 }
 
                 if (this.counter > collections.length - 1) {
@@ -101,12 +104,24 @@
                 this.$scope.$apply(() => {
                     var lat = collections[this.counter].features.geometry.coordinates[1];
                     var lng = collections[this.counter].features.geometry.coordinates[0];
+                    var speed = collections[this.counter].features.properties.speed;
+                    var batteryLevel = collections[this.counter].features.properties.batteryLevel;
+                    var signalQuality = collections[this.counter].features.properties.signalQuality;
 
                     if (lat && lng) {
                         this.polyline.addLatLng([lat, lng]);
                         this.marker.setLatLng(L.latLng(lat, lng));
                         this.marker['date'] = collections[this.counter].features.properties.date;
                     }
+
+                    this.dataTable.push({
+                        "date": this.marker['date'],
+                        "lat": lat,
+                        "lng": lng,
+                        "speed": speed,
+                        "battery": batteryLevel,
+                        "signal": signalQuality
+                    });
                 });
 
                 this.counter++;

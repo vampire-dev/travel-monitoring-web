@@ -12,49 +12,50 @@
                     <div class="jarviswidget-editbox"></div>
                     <div class="widget-body no-padding">
                         <div class="widget-body-toolbar">
-                            <i class="icon-append fa fa-calendar" ng-click="ctrl.openCalendar($event, 'from')"></i>
-                            <input type="text" class="form-control" datetime-picker ng-model="ctrl.filters.from" is-open="ctrl.from.open" />
-
-                            <i class="icon-append fa fa-calendar" ng-click="ctrl.openCalendar($event, 'to')"></i>
-                            <input type="text" class="form-control" datetime-picker ng-model="ctrl.filters.to" is-open="ctrl.to.open" />
-                            <br />
-
-                            <button class="btn btn-primary" ng-click="ctrl.start()">
-                                <i class="fa" ng-class="{'fa-stop': ctrl.tracking, 'fa-play' : !ctrl.tracking}"></i> {{ctrl.tracking ? 'Stop' : 'Start'}}
-                            </button>
-                        </div>
-                        <div class="table-responsive" style="overflow-y: scroll; max-height:500px;">
-                            <table class="table table-bordered">
-                                <tbody>
-                                    <tr>
-                                        <th>Name</th>
-                                        <td>{{ctrl.client.firstName}} {{ctrl.client.lastName}}</td>
-                                    </tr>
-                                    <tr>
-                                        <th>Device Model</th>
-                                        <td>{{ctrl.client.device.model}}</td>
-                                    </tr>
-                                    <tr>
-                                        <th>Device Serial</th>
-                                        <td>{{ctrl.client.device.serial}}</td>
-                                    </tr>
-                                  
-                                    <tr>
-                                        <th>Date</th>
-                                        <td>{{ctrl.marker.date}}</td>
-                                    </tr>
-                                    <tr>
-                                        <th>Lat</th>
-                                        <td>{{ctrl.marker._latlng.lat}}</td>
-                                    </tr>
-                                    <tr>
-                                        <th>Lon</th>
-                                        <td>{{ctrl.marker._latlng.lng}}</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-
+                            <form class="smart-form">
+                                 <fieldset>
+                                     <div class="row">
+                                         <section class="col col-sm-12 col-md-12 col-lg-12">
+                                             <label class="input">
+                                                 <input type="text" placeholder="Name" disabled="disabled" ng-model="ctrl.client.firstName" />
+                                             </label>
+                                         </section>
+                                         <section class="col col-sm-12 col-md-12 col-lg-12">
+                                             <label class="input">
+                                                 <input type="text" placeholder="Name" disabled="disabled" ng-model="ctrl.client.lastName" />
+                                             </label>
+                                         </section>
+                                         <section class="col col-sm-12 col-md-12 col-lg-12">
+                                             <label class="input">
+                                                 <input type="text" placeholder="Name" disabled="disabled" ng-model="ctrl.client.device.model" />
+                                             </label>
+                                         </section>
+                                         <section class="col col-sm-12 col-md-12 col-lg-12">
+                                             <label class="input">
+                                                 <input type="text" placeholder="Name" disabled="disabled" ng-model="ctrl.client.device.serial" />
+                                             </label>
+                                         </section>
+                                         <section class="col col-sm-12 col-md-12 col-lg-12">
+                                             <label class="input">
+                                                 <i class="icon-append fa fa-calendar" ng-click="ctrl.openCalendar($event, 'from')"></i>
+                                                 <input type="text" class="form-control" datetime-picker ng-model="ctrl.filters.from" is-open="ctrl.from.open" />
+                                             </label>
+                                         </section>
+                                         <section class="col col-sm-12 col-md-12 col-lg-12">
+                                             <label class="input">
+                                                 <i class="icon-append fa fa-calendar" ng-click="ctrl.openCalendar($event, 'to')"></i>
+                                                 <input type="text" class="form-control" datetime-picker ng-model="ctrl.filters.to" is-open="ctrl.to.open" />
+                                             </label>
+                                         </section>
+                                     </div>
+                                 </fieldset>
+                                <footer>
+                                    <button class="btn btn-primary" ng-click="ctrl.start()">
+                                        <i class="fa" ng-class="{'fa-stop': ctrl.tracking, 'fa-play' : !ctrl.tracking}"></i> {{ctrl.tracking ? 'Stop' : 'Start'}}
+                                    </button>
+                                </footer>
+                            </form>
+                        </div>   
                     </div>
                 </div>
             </div>
@@ -72,6 +73,42 @@
                     <div class="widget-body no-padding">
                         <div class="widget-body-toolbar">
                             <div class="map" id="map"></div>
+                            <div class="table-responsive" style="overflow-y: scroll; max-height:500px;">
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th style="text-align:center;">Date</th>
+                                            <th style="text-align:center;">Latitude</th>
+                                            <th style="text-align:center;">Longitude</th>
+                                            <th style="text-align:center;">Battery</th>
+                                            <th style="text-align:center;">Speed</th>
+                                            <th style="text-align:center;">Signal</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr ng-repeat="data in ctrl.dataTable">
+                                            <td style="width:auto;">
+                                                {{data.date | date:'dd-MM-yyyy HH:mm:ss'}}
+                                            </td>
+                                            <td>
+                                                {{data.lat}}
+                                            </td>
+                                            <td>
+                                                {{data.lng}}
+                                            </td>
+                                            <td>
+                                                {{data.battery}}%
+                                            </td>
+                                            <td>
+                                                {{data.speed}}
+                                            </td>
+                                            <td>
+                                                {{data.signal}}
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
